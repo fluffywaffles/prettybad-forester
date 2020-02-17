@@ -5,7 +5,10 @@ If a tree falls on a forester, does anyone hear them scream?
 
 ## Forest
 ### @prettybad/forest
-Forest (n): data structure; a collection of trees.
+<dl>
+  <dt>Forest (n):</dt>
+  <dd>data structure; a collection of trees.</dd>
+</dl>
 
 @prettybad/forest is _normalized_. This means, rather than nesting the
 nodes in trees in the forest under one another as children:
@@ -52,8 +55,12 @@ bad forest. (Also, it lacks any sort of peat or pine scent.)
 
 ## Parse
 ### @prettybad/parse (AKA parsimony)
-Parse (v): extrapolate and represent meaning from text.
-Parsimony (n): being to-the-point. As in: brief, terse, laconic.
+<dl>
+  <dt>Parse (v):</dt>
+  <dd>extrapolate and represent meaning from text.</dd>
+  <dt>Parsimony (n):</dt>
+  <dd>being to-the-point. As in: brief, terse, laconic.</dd>
+</dl>
 
 @prettybad/parse is a parser-generator library. Given a sequence of
 tokens, a Forest is constructed that matches sub-sequences of tokens and
