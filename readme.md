@@ -167,13 +167,15 @@ It can't lex C++, that's for sure! It may not even be able to lex C!
 ## Putting it all together
 An end-to-end textual analysis using these libraries looks like:
 
+```
   text → lex → tokens → parse → nodes → forest
+```
 
 Where the lexer is defined and generated using @prettybad/lex; the parser
 is defined and generated using @prettybad/parser; and the forest is an
 instance of @prettybad/forest (AKA Forest).
 
-The input text is a string or a rope (where the rope is a Forest).
+The input text is a string.
 
 Tokens are objects defined by the lexer definition, and expected as input
 by the parser definition.
