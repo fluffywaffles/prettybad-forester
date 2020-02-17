@@ -139,6 +139,17 @@ time. So, the inputs:
 - `[)))(()(]` will lex as `square(... parens() ...)`
 - `(]][[]]])` will lex as `parens(... square(square()) ...)`
 
+**NOTE** that example 2 errors and fails to lex, but examples like 4 and 5
+are fine. Why is that? That's because there's no top-level token that will
+match anything. Since the only top-level tokens are `(...)` and `[...]`,
+an input that begins with `(` MUST match `(...)`. Similarly, an input that
+begins with `[` MUST match `[...]`. An input that begins with neither is
+immediately an error. Some more examples to illustrate this point:
+
+- `abc` does not begin to lex, errors immediately
+- `)` does not begin to lex, errors immediately
+- `[` begins to lex as `square(...)` but errors on missing `]`
+
 An emphasis on delimiters means that @prettybad/lex is effectively
 incapable of lexical analysis on free text. A focus on highly-structured
 textual inputs keeps the code simpler and cleaner. @prettybad/lex is not,
