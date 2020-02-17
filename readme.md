@@ -48,7 +48,7 @@ arrays. No pointer chasing, no 'left'/'right', no 'if not null' in your
 breadth-first searches. `forest.children(node)` is literally an array of
 children. If it's empty, then it's empty; if there are twenty, then there
 are twenty; if anything in there is 'null', then you did that yourself
-(and I judge you for that (\>-\_\_-)\> \<(T o T)\> \<(-\_\_-\<)).
+(and I judge you for that \<(-\_\_-\<) \<(T o T)\> (\>-\_\_-)\>).
 
 Clearly, since it's really just a couple of arrays, it really is a pretty
 bad forest. (Also, it lacks any sort of peat or pine scent.)
