@@ -75,7 +75,7 @@ parse units can be resolved and materialized instantaneously. Dangling
 references will be caught during parse, and can either be marked in the
 resulting Forest for later reconciliation or can throw a fatal error.
 
-Obviously, since the parser will fatally error if references between nodes
+Obviously, since the parser may fatally error if references between nodes
 cannot be resolved, it really is a pretty bad parser. It can't parse C,
 that's for sure!
 
