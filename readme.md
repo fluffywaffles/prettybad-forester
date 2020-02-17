@@ -108,7 +108,9 @@ content (either a regular expression, or another Token). A Token can have
 A 2-delimiter token is delimited by a pair, like `"..."` or `(...)`.
 
 Note that delimiters cannot occur within a token, except where the token
-definition allows recursive nesting.
+definition allows recursive nesting. So, even if a token allows "any text"
+within its contents, "any text" still excludes the token delimiters. (We
+do not lex `[]]` as `[...]` - it would be inefficient and annoying.)
 
 Tokens are lexed _independently_. That is: once a token is entered, only
 its definition is considered by the lexer. For example, with the following
